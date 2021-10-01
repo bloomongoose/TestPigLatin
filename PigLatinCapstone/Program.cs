@@ -7,15 +7,36 @@ namespace PigLatinCapstone
     class Program
     {
         static void Main(string[] args)
-        {         
-            //Getting user input
-            
-            Console.WriteLine("Welcome to the PigLatinator. Enter a word: ");
-            string input = Console.ReadLine();
-            Console.WriteLine(ToPigLatin(input));
+        {
+            bool runProgram = true;
+
+            while (runProgram)
+            {
+                //Getting user input          
+                Console.WriteLine("Welcome to the PigLatinator. Enter a word: ");
+                string input = Console.ReadLine();
+                Console.WriteLine(ToPigLatin(input));
+
+                Console.WriteLine("Pig Latinate another word or phrase? y/n");
+                string askAgain = Console.ReadLine();
+                askAgain = askAgain.ToLower();
+                if (askAgain == "y")
+                {
+                    runProgram = true;
+                }
+
+                else
+                {
+                    runProgram = false;
+                    Console.WriteLine($"Goodbye.");
+                }
+            }
+
            
         }
 
+        //This section gets user input and outputs words (both starting with vowels and consonants)
+        //as well as sentences into pig latin
         static string ToPigLatin(string sentence)
         {
 
