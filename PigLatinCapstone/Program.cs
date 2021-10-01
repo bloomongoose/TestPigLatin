@@ -28,7 +28,7 @@ namespace PigLatinCapstone
                 else
                 {
                     runProgram = false;
-                    Console.WriteLine($"Goodbye.");
+                    Console.WriteLine("Goodbye.");
                 }
             }
 
