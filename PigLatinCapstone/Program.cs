@@ -32,7 +32,7 @@ namespace PigLatinCapstone
                 }
             }
 
-           
+
         }
 
         //This section gets user input and outputs words (both starting with vowels and consonants)
@@ -61,6 +61,27 @@ namespace PigLatinCapstone
             return string.Join(" ", pigWords);
         }
 
-        
+
+        //Just a word, vowel or consonant:
+        public static string pigLatinator(string x)
+        {
+
+            string result = x;
+            char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+            foreach (char y in vowels)
+            {
+                if (y == x[0])
+                {
+                    return result + "way";
+                }
+
+                Console.WriteLine(result.IndexOfAny(vowels));
+                int position = result.IndexOfAny(vowels);
+                result = x.Substring(position) + x.Substring(0, position) + "ay";
+            }
+            return result;
+        }
+
+
     }
 }
