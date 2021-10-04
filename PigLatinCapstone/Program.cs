@@ -16,13 +16,13 @@ namespace PigLatinCapstone
                 Console.WriteLine("Welcome to the PigLatinator. Enter a word: ");
                 string input = Console.ReadLine();
                 Console.WriteLine(ToPigLatin(input));
-
+                Console.WriteLine(pigLatinator(input));
                 Console.WriteLine("Pig Latinate another word or phrase? y/n");
                 string askAgain = Console.ReadLine();
                 askAgain = askAgain.ToLower();
                 if (askAgain == "y")
                 {
-                    runProgram = true;
+                    runProgram = true; 
                 }
 
                 else
